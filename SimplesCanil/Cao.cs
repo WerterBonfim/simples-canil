@@ -7,6 +7,7 @@ namespace SimplesCanil
         public Guid Id { get; set; }
         public string Nome { get; set; }
         public Guid ClienteId { get; set; }
+        public Cliente Cliente { get; set; }
 
         public Cao()
         {

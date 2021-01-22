@@ -18,7 +18,8 @@ create table TB_Clientes
             primary key nonclustered,
     Nome           varchar(50),
     DataNascimento date,
-    CPF            varchar(15)
+    CPF            varchar(15),
+    DataHoraCadastro datetime default getdate()
 )
 go
 
@@ -34,6 +35,7 @@ create table TB_Caes
             primary key nonclustered,
     Nome      varchar(30),
     Raca      varchar(30),
+    DataHoraCadastro datetime default getdate()
     ClienteId uniqueidentifier
         constraint TB_Caes_TB_Clientes_Id_fk
             references TB_Clientes
